@@ -2,6 +2,7 @@
  * Created by XRene on 16/9/11.
  */
 import { Component } from '@angular/core';
+import Hero from './components/hero';
 
 @Component({
     selector: 'my-app',
@@ -48,10 +49,4 @@ export default class AppComponent {
     }
 }
 
-class Hero {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-}
 

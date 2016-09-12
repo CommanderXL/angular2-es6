@@ -1,22 +1,16 @@
 import {Component, Input} from '@angular/core';
+import Hero from '../hero';
 
 @Component({
     selector: 'click-c',
+    inputs: ['hero'],   //没有使用@input装饰器的语法
     template: require('./synax.html')
 })
-export default class SynaxComponent {
-
+class SynaxComponent {
     showMsg() {
         console.log(this.msg);
     }
-
-    @Input()
-    hero: Hero;
 }
 
-class Hero {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-}
+export default SynaxComponent;
+
