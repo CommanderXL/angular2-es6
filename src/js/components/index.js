@@ -1,0 +1,1 @@
+import Clickc from './synax/synax.component';
