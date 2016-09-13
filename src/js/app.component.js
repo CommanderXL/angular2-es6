@@ -1,8 +1,9 @@
 /**
  * Created by XRene on 16/9/11.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Hero from './components/hero';
+import {HeroService} from './components/hero.service';  //导入heroservice服务
 
 @Component({
     selector: 'my-app',
@@ -21,31 +22,32 @@ import Hero from './components/hero';
                 color: red;
             }
         `
-    ]
+    ],
+    providers: [HeroService]
 })
-export default class AppComponent {
-    selectedHero: {};
-    username = 'dreamapple';
-    age = 22;
-    fruit: 'apple';
-    fruitsList = [
-            {
-                name: 'Apple',
-                id: 1
-            },
-            {
-                name: 'orange',
-                id: 2
-            },
-            {
-                name: 'glass',
-                id: 3
-            }
-        ];
+export default class AppComponent implements OnInit{
+
+    constructor(heroService: HeroService) {
+        this.username = 'dreamapple';
+        this.age = 22;
+        this.fruit = 'apple';
+        this.heroService = heroService;
+    }
+
+    
 
     showFruit(fruit = {name: 'nothing to show', id: 0}) {
         this.selectedHero = new Hero(fruit.id, fruit.name);
         console.log(this.selectedHero);
+    }
+
+    getHeroes() {
+        this.fruitsList = this.heroService.getHeroes();
+    }
+
+    ngOnInit() {
+        //console.log(this.heroService);
+        this.getHeroes();
     }
 }
 

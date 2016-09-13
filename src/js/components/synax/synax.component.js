@@ -3,11 +3,11 @@ import Hero from '../hero';
 
 @Component({
     selector: 'click-c',
-    //inputs: ['hero'],   //没有使用@input装饰器的语法
     template: require('./synax.html')
 })
 class SynaxComponent {
 
+    //使用装饰器语法来获得父组件传值给子组件
     @Input() hero: Hero;
 
     showMsg() {
