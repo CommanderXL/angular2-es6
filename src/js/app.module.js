@@ -9,7 +9,7 @@ import {FormsModule} from '@angular/forms';
 import {HeroesComponent} from './heroes.component'; //HeroComponent组件
 import {DashboardComponent} from './dashboard.component';
 import {AppComponent} from './app.component';     //AppComponent组件
-import {SynaxComponent} from './components/synax/synax.component';
+import {HeroDetailComponent} from './components/synax/synax.component';
 
 //heroService服务
 import {HeroService} from './components/hero.service';
@@ -25,7 +25,7 @@ import {routing} from './app.routing';
     ],
     declarations: [
         AppComponent,
-        SynaxComponent,
+        HeroDetailComponent,
         HeroesComponent,
         DashboardComponent
     ],

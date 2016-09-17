@@ -5,7 +5,8 @@ import {RoutesConfig, RouterModule} from '@angular/router';
 import {HeroesComponent} from './heroes.component';
 //导入DashboardCompoennt
 import {DashboardComponent} from './dashboard.component';
-
+//导入HeroDetailComponent
+import {HeroDetailComponent} from './components/synax/synax.component';
 
 //outlet路由插座
 
@@ -22,6 +23,10 @@ const appRoutes = [
     {
         path: 'dashboard',
         component: DashboardComponent
+    },
+    {
+        path: 'detail/:id',
+        component: HeroDetailComponent
     }
 ];
 

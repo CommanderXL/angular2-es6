@@ -9,4 +9,10 @@ export class HeroService {
     getHeroes() {
         return HEROES;
     }
+    getHero(id) {
+        let heroes = this.getHeroes();
+        return heroes.find((hero) => {
+            return hero.id === id;
+        });
+    }
 }
