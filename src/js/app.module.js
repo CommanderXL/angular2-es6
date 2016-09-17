@@ -4,6 +4,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
+import {httpModule} from '@angular/http';
 
 
 import {HeroesComponent} from './heroes.component'; //HeroComponent组件
@@ -21,7 +22,8 @@ import {routing} from './app.routing';
     imports: [
         BrowserModule,
         FormsModule,
-        routing
+        routing,
+        httpModule
     ],
     declarations: [
         AppComponent,
